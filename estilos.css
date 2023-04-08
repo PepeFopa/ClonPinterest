@@ -1,4 +1,193 @@
-.Titulo
-{
+.Header {
     color: red;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+}
+
+.buscar {
+    position: absolute;
+    top: 10px;
+    left: 60px;
+    width: 100%;
+
+}
+
+.buscar input {
+    width: 85%;
+    height: 30px;
+    border-radius: 30px;
+    background-color: rgb(224, 224, 224);
+    border-color: aliceblue;
+
+}
+
+
+.logo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+}
+
+.links img {
+    left: 150px;
+    display: inline-block;
+    height: 25px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+.links {
+    position: absolute;
+    right: 10px;
+    margin-right: 5px;
+}
+
+
+
+.Image {
+    position: relative;
+    
+    border-radius: 25px;
+    overflow: hidden;
+
+}
+
+
+
+.card-info {
+    width: 1fr;
+    height: 1fr;
+    background-color: black;
+    border-radius: 25px;
+}
+.boton {
+    position: absolute;
+    display: flex;
+    width: 110px;
+    height: 40px;
+    color: white;
+    background-color: tomato;
+    font-size: 150%;
+    align-items: center;
+    justify-content: center;
+    right: 5%;
+    top: 5%;
+    border-radius: 25px;
+    visibility: hidden;
+    cursor: pointer;
+}
+.Image-container {
+
+    display: grid;
+    grid-template-columns: repeat(6, 230px);
+    /*grid-template-rows: repeat(2, 1fr);*/
+    background-color: white;
+    column-gap: 25px;
+    row-gap: 25px;
+    margin: 100px;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.Image img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border-radius: 25px;
+    overflow: hidden;
+    
+    
+    
+
+}
+
+
+.Image:hover {
+    
+    filter: opacity(0.9);  
+    
+}
+
+.card-info:hover .boton {
+   visibility: visible;
+    
+    
+    
+}
+
+@media screen and (max-width: 1630px) {
+
+    .Image-container {
+        grid-template-columns: repeat(5, 220px);
+        /*grid-template-rows: repeat(3, 1fr);*/
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .buscar input {
+        width: 80%;
+    }
+
+    .Image-container {
+        grid-template-columns: repeat(4, 220px);
+        /*grid-template-rows: repeat(3, 1fr);*/
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .buscar input {
+        width: 75%;
+    }
+
+    .Image-container {
+        grid-template-columns: repeat(3, 220px);
+        /*grid-template-rows: repeat(3, 1fr);*/
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .buscar input {
+        width: 70%;
+    }
+
+    .Image-container {
+        grid-template-columns: repeat(2, 220px);
+        /*grid-template-rows: repeat(3, 1fr);*/
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .buscar input {
+        width: 60%;
+    }
+
+    .Image-container {
+        justify-content: start;
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .buscar input {
+        width: 50%;
+    }
+
+    .links {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .buscar input {
+        width: 35%;
+    }
+
+    .links {
+        visibility: hidden;
+    }
 }
